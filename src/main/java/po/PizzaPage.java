@@ -8,6 +8,7 @@ public class PizzaPage {
     WebDriver driver;
     private String margaritaLink = "//div[@title='Пицца Маргарита']";
     private String margaritaTypeLink = "//li[@data-id='589']";
+    private String addToCartLink = "//button[@data-id='364']";
 
     public PizzaPage(WebDriver driver) {
         this.driver = driver;
@@ -19,5 +20,8 @@ public class PizzaPage {
     }
     public void clickMargaritaTypeLink(){
         WebElement margaritaTypeLinkElement = driver.findElement(By.xpath(margaritaTypeLink));
+    }
+    public void clickAddToCartLink(){
+        WebElement addToCartLinkElement = driver.findElement(By.xpath(addToCartLink));
     }
 }
