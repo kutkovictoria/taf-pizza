@@ -6,11 +6,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseTest {
     WebDriver driver;
+
     @BeforeEach
     public void driverSetup() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://terrapizza.by/");
     }
-}
 
+    public void driverShutDown() {
+        driver.quit();
+    }
+}
