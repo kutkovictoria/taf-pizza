@@ -27,8 +27,8 @@ public class PizzaPage {
         WebElement addMargaritaToCartLinkElement = new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath(addMargaritaToCartLink)));
     }
-    public void clickCurtLink() {
-        WebElement addMargaritaToCartLinkElement = new WebDriverWait(driver, Duration.ofSeconds(10))
+    public void clickCartLink() {
+        WebElement clickCartLinkElement = new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath(cartLink)));
     }
 }
