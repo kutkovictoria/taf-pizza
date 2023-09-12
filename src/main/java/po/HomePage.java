@@ -17,10 +17,8 @@ public class HomePage {
     }
 
     public void clickPizzaLink() {
-        //WebElement pizzaLinkElement = driver.findElement(By.xpath(pizzaLink));
         WebElement pizzaLinkElement = new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath(pizzaLink)));
-                        //presenceOfElementLocated(By.xpath(pizzaLink)));
         pizzaLinkElement.click();
     }
 }
