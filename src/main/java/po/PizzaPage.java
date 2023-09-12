@@ -6,7 +6,8 @@ import org.openqa.selenium.WebElement;
 
 public class PizzaPage {
     WebDriver driver;
-    private String margaritaLink = "Пицца Маргарита";
+    private String margaritaLink = "//div[@title='Пицца Маргарита']";
+    private String margaritaTypeLink = "//li[@data-id='589']";
 
     public PizzaPage(WebDriver driver) {
         this.driver = driver;
@@ -15,5 +16,8 @@ public class PizzaPage {
     public void clickMargaritaLink() {
         WebElement margaritaLinkElement = driver.findElement(By.xpath(margaritaLink));
         margaritaLinkElement.click();
+    }
+    public void clickMargaritaTypeLink(){
+        WebElement margaritaTypeLinkElement = driver.findElement(By.xpath(margaritaTypeLink));
     }
 }
