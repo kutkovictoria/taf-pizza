@@ -17,8 +17,8 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://terrapizza.by/");
-        WebElement closeCookiesBanner = driver.findElement(By.xpath("//button[@class='close-icon']"));
-        closeCookiesBanner.click();
+        HomePage homePage = new HomePage(driver);
+        homePage.closeCookiesBanner();
     }
 
     /*public void driverShutDown() {

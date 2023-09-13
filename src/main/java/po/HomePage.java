@@ -15,6 +15,10 @@ public class HomePage {
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
+    public void closeCookiesBanner(){
+        WebElement closeCookiesBanner = driver.findElement(By.xpath("//button[@class='close-icon']"));
+        closeCookiesBanner.click();
+    }
 
     public void openPizzaPage() {
         WebElement pizzaPageLinkElement = new WebDriverWait(driver, Duration.ofSeconds(10))
