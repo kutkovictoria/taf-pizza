@@ -15,7 +15,8 @@ public class HomePage {
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
-    public void closeCookiesBanner(){
+
+    public void closeCookiesBanner() {
         WebElement closeCookiesBanner = driver.findElement(By.xpath("//button[@class='close-icon']"));
         closeCookiesBanner.click();
     }

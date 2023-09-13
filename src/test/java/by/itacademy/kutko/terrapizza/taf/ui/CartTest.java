@@ -13,10 +13,11 @@ public class CartTest extends BaseTest {
         PizzaPage pizzaPage = new PizzaPage(driver);
         CartPage cartPage = new CartPage(driver);
         homePage.openPizzaPage();
+        //pizzaPage.selectMargaritaType();
         pizzaPage.addMargaritaToCart();
         pizzaPage.openCart();
         String expectedTextForPizzaInCart = "Пицца Маргарита Классическая";
         String actualTextForPizzaInCart = cartPage.getMargaritaCartLink();
-        Assertions.assertEquals(expectedTextForPizzaInCart,actualTextForPizzaInCart);
+        Assertions.assertEquals(expectedTextForPizzaInCart, actualTextForPizzaInCart);
     }
 }
