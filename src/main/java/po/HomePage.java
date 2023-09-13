@@ -9,16 +9,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class HomePage {
-    private WebDriver driver;
-    private String pizzaLink = "html/body/div[3]/div[2]/div/div/div/div/div/ul/li[10]/a"; //a[@href='/catalog/picca']
+    WebDriver driver;
+    private String pizzaPageLink = "html/body/div[3]/div[2]/div/div/div/div/div/ul/li[10]/a"; //a[@href='/catalog/picca']
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void clickPizzaLink() {
-        WebElement pizzaLinkElement = new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.elementToBeClickable(By.xpath(pizzaLink)));
-        pizzaLinkElement.click();
+    public void openPizzaPage() {
+        WebElement pizzaPageLinkElement = new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath(pizzaPageLink)));
+        pizzaPageLinkElement.click();
     }
 }

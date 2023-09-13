@@ -11,7 +11,7 @@ import java.time.Duration;
 public class PizzaPage {
     WebDriver driver;
     private String margaritaTypeLink = "//li[@data-id='589']";
-    private String addMargaritaToCartLink = "//*[@id='menu-card-364']/div[3]/div[3]/div[2]/div[2]/button";
+    private String addMargaritaToCartLink = "//button[@data-id='364']";
     private String cartLink = "//div[@class='basket__btn-top basket__top basket__btn-top--sm']";
 
     public PizzaPage(WebDriver driver) {
@@ -23,12 +23,16 @@ public class PizzaPage {
                 .until(ExpectedConditions.elementToBeClickable(By.xpath(margaritaTypeLink)));
     }
 
-    public void clickAddMargaritaToCartLink() {
+    public void addMargaritaToCart() {
         WebElement addMargaritaToCartLinkElement = new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath(addMargaritaToCartLink)));
+        addMargaritaToCartLinkElement.click();
     }
-    public void clickCartLink() {
+
+
+    public void openCart() {
         WebElement clickCartLinkElement = new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath(cartLink)));
+        clickCartLinkElement.click();
     }
 }
