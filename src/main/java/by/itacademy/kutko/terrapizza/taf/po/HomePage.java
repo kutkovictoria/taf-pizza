@@ -1,5 +1,6 @@
-package po;
+package by.itacademy.kutko.terrapizza.taf.po;
 
+import by.itacademy.kutko.terrapizza.taf.util.Singleton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,10 +11,14 @@ import java.time.Duration;
 
 public class HomePage {
     WebDriver driver;
-    private String pizzaPageLink = "html/body/div[3]/div[2]/div/div/div/div/div/ul/li[10]/a"; //a[@href='/catalog/picca']
+    private String pizzaPageLink = "//ul[@class='menu-navigation__main active']/..//a[@href='/catalog/picca']";
 
-    public HomePage(WebDriver driver) {
-        this.driver = driver;
+    public HomePage() {
+        this.driver = Singleton.getDriver();
+    }
+
+    public void openHomePage() {
+        driver.get("https://terrapizza.by/");
     }
 
     public void closeCookiesBanner() {
