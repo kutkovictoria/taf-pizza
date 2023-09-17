@@ -1,15 +1,16 @@
-package po;
+package by.itacademy.kutko.terrapizza.taf.po;
 
+import by.itacademy.kutko.terrapizza.taf.util.Singleton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class CartPage {
     WebDriver driver;
-    private String margaritaCartLink = "//*[@id='basket-el-0']/div[2]/div[1]/div[1]";
+    private String margaritaCartLink = "//div[@class='basket__products-item-name']";
 
-    public CartPage(WebDriver driver) {
-        this.driver = driver;
+    public CartPage() {
+        this.driver = Singleton.getDriver();
     }
 
     public String getMargaritaCartLink() {
