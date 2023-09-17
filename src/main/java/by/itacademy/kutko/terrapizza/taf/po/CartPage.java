@@ -13,7 +13,7 @@ public class CartPage {
         this.driver = Singleton.getDriver();
     }
 
-    public String getMargaritaCartLink() {
+    public String getMargaritaCartText() {
         WebElement textMargaritaCartLinkElement = driver.findElement(By.xpath(margaritaCartLink));
         return textMargaritaCartLinkElement.getText();
     }

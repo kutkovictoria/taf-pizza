@@ -25,7 +25,7 @@ public class CartTest extends BaseTest {
             Thread.sleep(300);
         } catch (Exception e) {
         }
-        String actualTextForPizzaInCart = cartPage.getMargaritaCartLink();
+        String actualTextForPizzaInCart = cartPage.getMargaritaCartText();
         Assertions.assertEquals(expectedTextForPizzaInCart, actualTextForPizzaInCart);
     }
 }
