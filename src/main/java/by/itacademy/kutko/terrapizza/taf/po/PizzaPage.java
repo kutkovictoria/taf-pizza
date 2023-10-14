@@ -11,8 +11,8 @@ import java.time.Duration;
 
 public class PizzaPage {
     WebDriver driver;
-    private String margaritaTypeLink = "//div[@title='Пицца Маргарита']/..//div[text()='Классическая']";
-    private String margaritaOptionGrandLink = "//li[@data-id='589'][text()='Гранд']";
+    private String margaritaTypeLink = "//div[@title='Пицца Маргарита']/..//div[text()='на тонком']";
+    private String margaritaOptionGrandLink = "//li[@data-id='589'][text()='на пышном']";
     private String addMargaritaToCartLink = "//button[@data-id='364']";
     private String cartLink = "//div[@class='basket__btn-top basket__top basket__btn-top--sm']";
 
