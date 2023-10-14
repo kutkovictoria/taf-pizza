@@ -15,14 +15,14 @@ public class CartTest extends BaseTest {
         homePage.openPizzaPage();
         pizzaPage.selectMargaritaGrandType();
         try {
-            Thread.sleep(300);
+            Thread.sleep(1000);
         } catch (Exception e) {
         }
         pizzaPage.addMargaritaToCart();
         pizzaPage.openCart();
-        String expectedTextForPizzaInCart = "Пицца Маргарита Гранд 32 см";
+        String expectedTextForPizzaInCart = "Пицца Маргарита на пышном 32 см";
         try {
-            Thread.sleep(300);
+            Thread.sleep(1000);
         } catch (Exception e) {
         }
         String actualTextForPizzaInCart = cartPage.getMargaritaCartText();
