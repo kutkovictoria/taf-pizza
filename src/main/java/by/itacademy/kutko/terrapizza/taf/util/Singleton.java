@@ -2,6 +2,7 @@ package by.itacademy.kutko.terrapizza.taf.util;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 public class Singleton {
     private static WebDriver driver;
